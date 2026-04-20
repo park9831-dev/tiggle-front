@@ -1,6 +1,6 @@
 import React from 'react';
 import { ShieldCheck, Monitor, Lock, Chrome } from 'lucide-react';
-import { Button } from '../common/Button';
+import { Button } from '../../components/common/Button';
 
 interface LoginFormProps {
   onLogin: () => void;
@@ -20,7 +20,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
             Access your institutional-grade portfolio dashboard. Meticulously organized data for the discerning investor.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-2 gap-4">
           <div className="bg-[#06122d] p-6 rounded-xl border border-[#2b4680]/10">
             <div className="text-[#47c4ff] mb-2">
@@ -63,7 +63,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
             <h2 className="font-headline text-2xl font-bold text-[#dee5ff] mb-2">Welcome Back</h2>
             <p className="text-[#91aaeb] text-sm">Please enter your credentials to access your terminal.</p>
           </div>
-          
+
           <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); onLogin(); }}>
             <div className="space-y-1.5">
               <label className="text-[11px] font-bold uppercase tracking-widest text-[#91aaeb] ml-1" htmlFor="email">
@@ -77,7 +77,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
                 required
               />
             </div>
-            
+
             <div className="space-y-1.5">
               <div className="flex justify-between items-center">
                 <label className="text-[11px] font-bold uppercase tracking-widest text-[#91aaeb] ml-1" htmlFor="password">
@@ -95,7 +95,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
                 required
               />
             </div>
-            
+
             <Button className="w-full py-4 tracking-tight" type="submit">
               Access Terminal
             </Button>
@@ -125,7 +125,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
             </a>
           </div>
         </div>
-        
+
         <div className="mt-8 flex justify-center gap-6 opacity-40">
           <span className="text-[10px] uppercase tracking-widest font-bold">Privacy</span>
           <span className="text-[10px] uppercase tracking-widest font-bold">Terms</span>

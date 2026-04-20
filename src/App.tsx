@@ -1,13 +1,13 @@
 import React from 'react';
 import { Plus, Info, TriangleAlert } from 'lucide-react';
-import { Header } from './components/layout/Header';
-import { BottomNav } from './components/layout/BottomNav';
-import { PortfolioHero } from './components/dashboard/PortfolioHero';
-import { PerformanceChart } from './components/dashboard/PerformanceChart';
-import { HoldingsList } from './components/dashboard/HoldingsList';
-import { NewsSection } from './components/dashboard/NewsSection';
-import { TransactionsList } from './components/dashboard/TransactionsList';
-import { LoginForm } from './components/auth/LoginForm';
+import { Header } from './layouts/Header';
+import { BottomNav } from './layouts/BottomNav';
+import { PortfolioHero } from './pages/dashboard/PortfolioHero';
+import { PerformanceChart } from './pages/dashboard/PerformanceChart';
+import { HoldingsList } from './pages/dashboard/HoldingsList';
+import { NewsSection } from './pages/dashboard/NewsSection';
+import { TransactionsList } from './pages/dashboard/TransactionsList';
+import { LoginForm } from './pages/auth/LoginForm';
 import { Modal } from './components/common/Modal';
 import { Button } from './components/common/Button';
 import { cn } from './lib/utils';
@@ -51,11 +51,11 @@ export default function App() {
   return (
     <div className={cn("min-h-screen bg-[#060e20] text-[#dee5ff]", (showSecurityModal || showDiscardModal) && "overflow-hidden")}>
       <Header />
-      
+
       <main className="pt-24 pb-32 px-6 max-w-7xl mx-auto space-y-12">
         <PortfolioHero totalValue={842591.12} changePercent={12.4} />
         <PerformanceChart />
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           <div className="lg:col-span-7">
             <HoldingsList />
@@ -64,14 +64,14 @@ export default function App() {
             <NewsSection />
           </div>
         </div>
-        
+
         <TransactionsList />
       </main>
 
       <BottomNav />
 
       {/* Floating Action Button */}
-      <button 
+      <button
         onClick={() => setShowDiscardModal(true)}
         className="fixed right-6 bottom-24 w-14 h-14 bg-[#b9c8de] text-[#334153] rounded-full shadow-2xl flex items-center justify-center hover:scale-105 active:scale-95 transition-all z-40"
       >

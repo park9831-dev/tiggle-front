@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from '../common/Card';
+import { Card } from '../../components/common/Card';
 
 export const PerformanceChart: React.FC = () => {
   return (
@@ -11,7 +11,7 @@ export const PerformanceChart: React.FC = () => {
         <div className="border-t border-[#2b4680] w-full"></div>
         <div className="border-t border-[#2b4680] w-full"></div>
       </div>
-      
+
       {/* SVG Chart */}
       <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1000 300">
         <defs>
@@ -21,7 +21,7 @@ export const PerformanceChart: React.FC = () => {
             <stop offset="100%" stopColor="#47c4ff" stopOpacity="0" />
           </linearGradient>
         </defs>
-        
+
         {/* Benchmark Line (S&P 500) */}
         <path
           d="M0,260 L100,255 L200,230 L300,240 L400,210 L500,215 L600,190 L700,200 L800,170 L900,180 L1000,150"
@@ -31,13 +31,13 @@ export const PerformanceChart: React.FC = () => {
           strokeOpacity="0.4"
           strokeWidth="1.5"
         />
-        
+
         {/* Portfolio Area */}
         <path
           d="M0,250 C100,240 200,280 300,220 C400,160 500,180 600,80 C700,40 800,120 900,60 L1000,40 V300 H0 Z"
           fill="url(#portfolioGradient)"
         />
-        
+
         {/* Portfolio Main Line */}
         <path
           d="M0,250 C100,240 200,280 300,220 C400,160 500,180 600,80 C700,40 800,120 900,60 L1000,40"
@@ -48,7 +48,7 @@ export const PerformanceChart: React.FC = () => {
           strokeWidth="3"
         />
       </svg>
-      
+
       {/* Chart Legend Overlay */}
       <div className="absolute top-4 left-6 flex gap-4 text-[10px] font-bold uppercase tracking-widest">
         <div className="flex items-center gap-2">
@@ -60,7 +60,7 @@ export const PerformanceChart: React.FC = () => {
           <span className="text-[#91aaeb]">S&P 500</span>
         </div>
       </div>
-      
+
       {/* Interactive Tooltip Highlight */}
       <div className="absolute top-[40px] right-[40px] flex flex-col items-center group-hover:scale-105 transition-all duration-300 pointer-events-none">
         <div className="w-3 h-3 bg-[#47c4ff] rounded-full ring-4 ring-[#47c4ff]/20 shadow-[0_0_15px_rgba(71,196,255,0.6)]"></div>

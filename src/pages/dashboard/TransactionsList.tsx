@@ -1,6 +1,6 @@
 import React from 'react';
 import { ShoppingCart, Wallet } from 'lucide-react';
-import { Card } from '../common/Card';
+import { Card } from '../../components/common/Card';
 import { formatCurrency } from '@/src/lib/utils';
 
 interface Transaction {
@@ -51,9 +51,8 @@ export const TransactionsList: React.FC = () => {
                 <span className="font-semibold truncate text-sm md:text-base">{tx.description}</span>
               </div>
               <div className="shrink-0 hidden sm:block">
-                <span className={`px-2 py-1 rounded text-[10px] font-bold uppercase whitespace-nowrap ${
-                  tx.status === 'completed' ? 'bg-[#47c4ff]/10 text-[#47c4ff]' : 'bg-[#8f9fb7]/10 text-[#8f9fb7]'
-                }`}>
+                <span className={`px-2 py-1 rounded text-[10px] font-bold uppercase whitespace-nowrap ${tx.status === 'completed' ? 'bg-[#47c4ff]/10 text-[#47c4ff]' : 'bg-[#8f9fb7]/10 text-[#8f9fb7]'
+                  }`}>
                   {tx.status}
                 </span>
               </div>

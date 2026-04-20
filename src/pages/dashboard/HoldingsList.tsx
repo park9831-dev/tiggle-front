@@ -1,6 +1,6 @@
 import React from 'react';
 import { Landmark, Bitcoin, Apple, Zap } from 'lucide-react';
-import { Card } from '../common/Card';
+import { Card } from '../../components/common/Card';
 import { formatCurrency, formatPercentage } from '@/src/lib/utils';
 
 interface Holding {
